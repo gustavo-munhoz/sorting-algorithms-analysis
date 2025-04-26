@@ -1,0 +1,9 @@
+/// Common trait for sorting algorithms.
+pub trait SortAlgorithm {
+
+    /// Returns the name of the algorithm.
+    fn name(&self) -> &'static str;
+
+    /// Sorts the data *in-place*.
+    fn sort(&self, data: &mut [i32]);
+}
