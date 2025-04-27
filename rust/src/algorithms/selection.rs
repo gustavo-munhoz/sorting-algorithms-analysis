@@ -8,6 +8,6 @@ impl SortAlgorithm for SelectionSort {
     }
 
     fn sort(&self, data: &mut [i32]) {
-        todo!()
+        // todo!()
     }
 }
