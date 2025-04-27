@@ -15,7 +15,7 @@ static RESULTS: Lazy<Mutex<Vec<(String, bool)>>> = Lazy::new(|| Mutex::new(Vec::
 
 fn run_sort_tests(algorithm: &dyn SortAlgorithm) {
     let test_cases = vec![
-        // vec![],
+        vec![],
         vec![1],
         vec![2, 1],
         vec![1, 2, 3, 4, 5],
