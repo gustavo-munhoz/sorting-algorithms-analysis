@@ -30,3 +30,15 @@ def run(
             )
 
     return results
+
+
+def run_one(sorter: SortAlgorithm, n: int) -> dict:
+    data = random_list(n)
+    start = time.perf_counter()
+    sorter.sort(data)
+    elapsed = time.perf_counter() - start
+    return {
+        "algorithm": sorter.name,
+        "n": n,
+        "time_s": elapsed,
+    }
