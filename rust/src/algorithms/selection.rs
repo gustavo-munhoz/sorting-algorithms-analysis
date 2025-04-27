@@ -8,6 +8,14 @@ impl SortAlgorithm for SelectionSort {
     }
 
     fn sort(&self, data: &mut [i32]) {
-        // todo!()
+        for i in 0..data.len() {
+            let mut min_index = i;
+            for j in i+1..data.len() {
+                if data[j] < data[min_index] {
+                    min_index = j;
+                }
+            }
+            data.swap(i, min_index);
+        }
     }
 }
