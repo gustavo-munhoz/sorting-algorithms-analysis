@@ -8,6 +8,14 @@ impl SortAlgorithm for InsertionSort {
     }
 
     fn sort(&self, data: &mut [i32]) {
-        // todo!()
+        for i in 1..data.len() {
+            let key = data[i];
+            let mut j = i;
+            while j > 0 && data[j - 1] > key {
+                data[j] = data[j - 1];
+                j -= 1;
+            }
+            data[j] = key;
+    }
     }
 }
