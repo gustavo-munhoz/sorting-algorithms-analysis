@@ -9,6 +9,9 @@ impl SortAlgorithm for QuickSort {
     }
 
     fn sort(&self, data: &mut [i32], m: &mut Metrics) {
+        if data.len() < 2 {
+            return;
+        }
         self.quick_sort(data, 0, data.len() - 1, m);
     }
 }
