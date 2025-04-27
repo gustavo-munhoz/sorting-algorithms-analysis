@@ -1,5 +1,5 @@
 /// Common trait for sorting algorithms.
-pub trait SortAlgorithm {
+pub trait SortAlgorithm: Send + Sync {
 
     /// Returns the name of the algorithm.
     fn name(&self) -> &'static str;
