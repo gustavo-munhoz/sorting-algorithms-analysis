@@ -33,8 +33,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args = Args::parse();
 
     let algorithms: Vec<Box<dyn SortAlgorithm>> = vec![
-        // Box::new(InsertionSort),
-        // Box::new(SelectionSort),
+        Box::new(InsertionSort),
+        Box::new(SelectionSort),
         Box::new(BubbleSort),
         Box::new(MergeSort),
         Box::new(QuickSort),
