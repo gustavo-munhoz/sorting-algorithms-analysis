@@ -5,5 +5,8 @@ class BubbleSort(SortAlgorithm):
     name = "BubbleSort"
 
     def sort(self, data):
-        # TODO: Import bubble sort
-        pass
+        for i in range(1, len(data)):
+            for j in range(0, len(data) - i):
+                if data[j] > data[j + i]:
+                    data[j], data[j + i] = data[j + i], data[j]
+    
