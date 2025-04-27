@@ -1,3 +1,5 @@
+use crate::metrics::Metrics;
+
 /// Common trait for sorting algorithms.
 pub trait SortAlgorithm: Send + Sync {
 
@@ -5,5 +7,5 @@ pub trait SortAlgorithm: Send + Sync {
     fn name(&self) -> &'static str;
 
     /// Sorts the data *in-place*.
-    fn sort(&self, data: &mut [i32]);
+    fn sort(&self, data: &mut [i32], m: &mut Metrics);
 }

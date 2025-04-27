@@ -35,8 +35,11 @@ def run(
 def run_one(sorter: SortAlgorithm, n: int) -> dict:
     data = random_list(n)
     start = time.perf_counter()
-    sorter.sort(data)
+    m = Metrics()
+    sorter.sort(data, m)
     elapsed = time.perf_counter() - start
+
+
     return {
         "algorithm": sorter.name,
         "n": n,

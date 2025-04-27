@@ -1,4 +1,4 @@
-use rand::{Rng, seq::index::sample};
+use rand::Rng;
 
 pub fn random_vec(n: usize) -> Vec<i32> {
     let mut rng = rand::rng();
