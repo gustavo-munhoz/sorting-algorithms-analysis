@@ -3,6 +3,7 @@ target
 
 # Python stuff
 __pycache__/
+.venv/
 *.pyc
 *.pyo
 *.pyd
