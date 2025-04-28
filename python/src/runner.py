@@ -25,7 +25,9 @@ def run(
                 {
                     "algorithm": sorter.name,
                     "N": n,
-                    "time_ns": m.elapsed_ns
+                    "time_ns": m.elapsed_ns,
+                    "comparisons": m.comparisons,
+                    "swaps": m.swaps,
                 }
             )
 
@@ -39,9 +41,10 @@ def run_one(sorter: SortAlgorithm, n: int) -> dict:
     sorter.sort(data, m)
     elapsed = time.perf_counter() - start
 
-
     return {
         "algorithm": sorter.name,
         "n": n,
         "time_s": elapsed,
+        "comparisons": m.comparisons,
+        "swaps": m.swaps,
     }
