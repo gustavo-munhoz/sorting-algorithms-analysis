@@ -16,5 +16,5 @@ echo "✅ All tests passed. Running benchmark..."
 if [ "$#" -gt 0 ]; then
     python3 -m "$BENCHMARK_SCRIPT" "$@"
 else
-    python3 -m "$BENCHMARK_SCRIPT" -s 10 100 1000 10000 100000 1000000 10000000
+    python3 -m "$BENCHMARK_SCRIPT" -s 10 100 1000 10000 100000 500000 
 fi
